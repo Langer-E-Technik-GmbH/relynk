@@ -1,0 +1,6 @@
+[submodule "relynkfe"]
+	path = relynkfe
+	url = git@relynk.lizzyc.at:relynkfe.git
+[submodule "relynkbe"]
+	path = relynkbe
+	url = git@relynk.lizzyc.at:relynkbe.git

@@ -1,0 +1,26 @@
+services:
+  frontend:
+    image: nginx-frontend
+    build: 
+      context: ./relynkfe
+      args:
+        - REACT_APP_SERVICES_HOST=/services/m
+    ports:
+      - "80:80"
+    networks: 
+      - frontend
+      - backend
+  
+  backend:
+    image: nginx-backend
+    build:
+      context: ./relynkbe
+    ports:
+      - "81:81"
+    networks: 
+      - frontend
+      - backend
+
+networks: 
+  frontend:
+  backend:
